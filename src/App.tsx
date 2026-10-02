@@ -200,8 +200,7 @@ function App() {
         <div className="hero-bg" />
         <div className="hero-inner">
           <div className="kicker">JAPAN TRIP HUB · 2026</div>
-          <h1>Japonia — plan 2.0</h1>
-          <p>Wspólny, mobilny plan wyjazdu: atrakcje, pogoda, mapy, noclegi, rezerwacje i plan B.</p>
+          <h1>Japonia — plan</h1>
           <div className="hero-actions">
             <button className="primary" onClick={() => setTab('today')}><Navigation size={17}/> Dzisiaj</button>
             <button className="ghost" onClick={() => window.print()}><Printer size={17}/> Drukuj / PDF</button>

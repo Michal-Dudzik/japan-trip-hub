@@ -50,7 +50,7 @@ export const itinerary: DayPlan[] = [
     stops: [
       { time: '~10:00', name: 'Lądowanie na Hanedzie', priority: 'MUST', mapQuery: 'Haneda Airport Tokyo' },
       { time: '~13:00–14:00', name: 'HANAYADO SHINJUKU / zostawienie bagaży', mapQuery: 'HANAYADO SHINJUKU Tokyo' },
-      { name: 'Tokyo Metropolitan Government Building', priority: 'OPTIONAL', mapQuery: 'Tokyo Metropolitan Government Building' },
+      { name: 'Tokyo Metropolitan Government Building', priority: 'OPTIONAL', note: 'Darmowy punkt widokowy — główna alternatywa dla płatnego Shibuya Sky. Jeśli po locie będziecie zmęczeni, można przenieść na inny dzień.', mapQuery: 'Tokyo Metropolitan Government Building Observatories' },
       { name: 'Giant 3D Cat', priority: 'OPTIONAL', mapQuery: 'Cross Shinjuku Vision' },
       { name: 'Godzilla Head', priority: 'OPTIONAL', mapQuery: 'Godzilla Head Shinjuku' },
       { name: 'Kabukicho', priority: 'MUST', mapQuery: 'Kabukicho Tokyo' },
@@ -68,10 +68,10 @@ export const itinerary: DayPlan[] = [
       { name: 'Harajuku / Takeshita Street', priority: 'MUST', mapQuery: 'Takeshita Street Harajuku' },
       { name: 'Miyashita Park', priority: 'OPTIONAL', mapQuery: 'Miyashita Park' },
       { name: 'Hachikō + Shibuya Crossing', priority: 'MUST', mapQuery: 'Shibuya Crossing' },
-      { time: '~16:30–17:00', name: 'Shibuya Sky', priority: 'MUST', note: 'Rezerwacja do zrobienia.', mapQuery: 'Shibuya Sky' },
+      { name: 'Shibuya Hikarie 11F Sky Lobby', priority: 'OPTIONAL', note: 'Darmowy widok na Shibuyę; dobra alternatywa dla płatnego Shibuya Sky.', mapQuery: 'Shibuya Hikarie Sky Lobby' },
       { name: 'Center-Gai / Mega Don Quijote', priority: 'OPTIONAL', mapQuery: 'MEGA Don Quijote Shibuya' },
     ],
-    planB: 'Jeśli mocno pada: Meiji/Yoyogi skrócić, więcej czasu dać Shibuya, sklepy i galerie. Shibuya Sky zależne od widoczności.',
+    planB: 'Jeśli mocno pada: Meiji/Yoyogi skrócić, więcej czasu dać Shibuyi, sklepom i galeriom. Darmowy Sky Lobby w Shibuya Hikarie można potraktować jako krótki punkt widokowy.',
   },
   {
     date: '2026-10-07', title: 'Imperial Palace + Ginza', city: 'tokyo', overnight: 'HANAYADO SHINJUKU', summary: 'Spokojniejszy dzień po intensywnej Shibuyi: centrum, zakupy i architektura.',
@@ -121,8 +121,8 @@ export const itinerary: DayPlan[] = [
   {
     date: '2026-10-11', title: 'Tokio → Kioto → Ohara', city: 'kyoto', overnight: 'Yumoto Onsen OharaSansou', summary: 'Dzień transferowy. Priorytetem jest spokojny dojazd na odbiór auta o 15:00 i wieczór w ryokanie.',
     stops: [
-      { time: '~10:00', name: 'Wyjście z noclegu', priority: 'MUST' },
-      { time: '~11:00–11:30', name: 'Shinkansen do Kyoto', priority: 'MUST', note: 'Cel: być w Kyoto około 13:15–13:45.', mapQuery: 'Shinagawa Station' },
+      { time: '~10:15–10:30', name: 'Wyjście z noclegu', priority: 'MUST', note: 'Zostawić duży zapas na dojazd na właściwą stację i znalezienie peronu.' },
+      { time: '12:00', name: 'Shinkansen do Kyoto', priority: 'MUST', note: 'Bilet kupiony. Sprawdźcie na bilecie dokładną stację odjazdu, numer pociągu i wagon. Po przyjeździe jedźcie bezpośrednio do wypożyczalni — odbiór auta o 15:00.' },
       { time: '15:00', name: 'Odbiór auta — Kyoto Downtown', priority: 'MUST', note: '9 Nakatonoda Cho Higashi 9 Jo', mapQuery: '9 Nakatonoda Cho Higashi 9 Jo Kyoto' },
       { name: 'Przejazd do OharaSansou', priority: 'MUST', mapQuery: 'Yumoto Onsen OharaSansou' },
       { name: 'Onsen / kolacja / odpoczynek', priority: 'MUST' },
@@ -252,10 +252,9 @@ export const itinerary: DayPlan[] = [
 export const reservations = [
   { status: 'confirmed', title: 'teamLab Borderless', detail: '8 października, 13:00', mapQuery: 'teamLab Borderless Azabudai Hills' },
   { status: 'confirmed', title: 'Auto — Kyoto Downtown', detail: '11.10 15:00 → 12.10 15:00 · 9 Nakatonoda Cho Higashi 9 Jo', mapQuery: '9 Nakatonoda Cho Higashi 9 Jo Kyoto' },
-  { status: 'todo', title: 'Shibuya Sky', detail: '6.10 · celuj ~16:30–17:00', mapQuery: 'Shibuya Sky' },
   { status: 'todo', title: 'Auto — Tokio / Daikoku / Fuji', detail: '9.10 wieczór → 10.10 wieczór · najlepiej ETC' },
   { status: 'todo', title: 'Fuji Motorsports Museum', detail: '10.10 · około 13:00–15:00', mapQuery: 'Fuji Motorsports Museum' },
-  { status: 'todo', title: 'Shinkansen Tokio → Kyoto', detail: '11.10 · wyjazd około 11:00–11:30' },
+  { status: 'confirmed', title: 'Shinkansen Tokio → Kyoto', detail: '11.10 · odjazd 12:00 · bilet kupiony' },
   { status: 'todo', title: 'Shinkansen Osaka → Tokio', detail: '18.10 · wyjazd około 10:00–11:00' },
 ];
 
@@ -274,7 +273,7 @@ export const checklist = {
 };
 
 export const transportNotes = [
-  { title: 'Tokio → Kyoto', text: '11.10: celuj w Shinkansen około 11:00–11:30. Przyjazd do Kyoto najlepiej do 13:45, żeby spokojnie odebrać auto o 15:00.' },
+  { title: 'Tokio → Kyoto', text: '11.10: Shinkansen kupiony na 12:00. Rano bez atrakcji: spokojne pakowanie, wyjazd z Shinjuku około 10:15–10:30 i duży zapas na dojazd na stację. Po przyjeździe do Kyoto od razu kierunek wypożyczalnia — auto czeka od 15:00.' },
   { title: 'Kyoto → Osaka', text: '12.10 po zwrocie auta o 15:00. Bez dodatkowej dużej atrakcji przed oddaniem samochodu.' },
   { title: 'Osaka → Tokio', text: '18.10: Shinkansen jest zdecydowanie najbardziej praktyczny. Zwykłe pociągi oznaczają wiele godzin i liczne przesiadki.' },
   { title: 'Daikoku PA', text: 'Dostęp wyłącznie od strony Shutoko. Sprawdzić ewentualne czasowe zamknięcia tego samego dnia.' },
