@@ -1,0 +1,10 @@
+{
+  "name": "Japonia 2026 — Trip Hub",
+  "short_name": "Japonia 2026",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0d1724",
+  "theme_color": "#0d1724",
+  "lang": "pl",
+  "icons": []
+}
